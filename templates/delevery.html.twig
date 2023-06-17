@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block title %}Conctact Us!
+{% endblock %}
+
+{% block body %}
+	<div class="text-danger" name="error"></div>
+	<div class="formbg bg-light rounded-4 mx-auto p-5">
+		<div class="row">
+			<h1 class="display-5 fw-normal mt-2 mb-4"><i class="bi bi-envelope-fill"></i> Lépj kapcsolatba velünk</h1>
+			<div class="col-5">
+				{{ form_start(form) }}
+				
+				{{ form_label(form.name) }}
+
+				{% if form_errors(form.name) %}
+					{{ form_widget(form.name, {'attr': {'class': 'form-control error mb-4 rounded-2'}}) }}
+				{% else %}
+					{{ form_widget(form.name, {'attr': {'class': 'form-control mb-4 rounded-2'}}) }}
+				{% endif %}
+
+				{{ form_label(form.email) }}
+				{% if form_errors(form.email) %}
+					{{ form_widget(form.email, {'attr': {'class': 'form-control error mb-4 rounded-2'}}) }}
+				{% else %}
+					{{ form_widget(form.email, {'attr': {'class': 'form-control mb-4 rounded-2'}}) }}
+				{% endif %}
+
+				{{ form_label(form.text) }}
+				{% if form_errors(form.text) %}
+					{{ form_widget(form.text, {'attr': {'class': 'form-control error mb-4 rounded-2'}}) }}
+				{% else %}
+					{{ form_widget(form.text, {'attr': {'class': 'form-control mb-4 rounded-2'}}) }}
+				{% endif %}
+
+				{% if ((form_errors(form.name)) or (form_errors(form.email)) or (form_errors(form.text))) %}
+					<h6 class="fs-5 text-danger text-center ">{{ "Üres mezők!" }}</h6>
+				{% else %}
+					<h6 class="text-danger text-center">{{ "" }}</h6>
+				{% endif %}	
+
+				<button type="submit" class="btn btn-light w-100 fs-5 pt mt-4 p-2 rounded-4">Küldés</button>
+
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

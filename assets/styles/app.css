@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Comic;
+    src: url(../../public/fonts/Avenir\ LT\ Std\ 85\ Heavy.otf);
+}
+
+@font-face {
+    font-family: light;
+    src: url(../../public/fonts/Avenir\ LT\ Std\ 65\ Medium.otf);
+}
+
+
+body {
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.rgb-bg {
+    background: linear-gradient(220deg, #fffb00, #f265ff);
+    background-size: 500% 500%;
+    -webkit-animation: RGB 70s ease infinite;
+    -z-animation: RGB 70s ease infinite;
+    -o-animation: RGB 70s ease infinite;
+    animation: RGB 70s ease infinite;
+}
+
+@-webkit-keyframes RGB {
+    0% {
+        background-position: 0% 80%
+    }
+
+    50% {
+        background-position: 100% 20%
+    }
+
+    100% {
+        background-position: 0% 80%
+    }
+}
+
+@-moz-keyframes RGB {
+    0% {
+        background-position: 0% 80%
+    }
+
+    50% {
+        background-position: 100% 20%
+    }
+
+    100% {
+        background-position: 0% 80%
+    }
+}
+
+@-o-keyframes RGB {
+    0% {
+        background-position: 0% 80%
+    }
+
+    50% {
+        background-position: 100% 20%
+    }
+
+    100% {
+        background-position: 0% 80%
+    }
+}
+
+@keyframes RGB {
+    0% {
+        background-position: 0% 80%
+    }
+
+    50% {
+        background-position: 100% 20%
+    }
+
+    100% {
+        background-position: 0% 80%
+    }
+}
+
+h1,label{
+    font-family: Comic !important;
+    color: #31285f !important;
+}
+
+h6{
+    font-family: light !important;
+    color: #31285f !important;
+}
+
+.formbg {
+    width: 65rem;
+    aspect-ratio: 3 / 2;
+    filter: drop-shadow(0px 9px 20px #00000025);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 220px;
+    background-image: url(../../public/images/Image.png);
+}
+
+.Successbg{
+    width: 65rem;
+    aspect-ratio: 3 / 2;
+    filter: drop-shadow(0px 9px 20px #00000025);
+}
+
+.Successtext{
+    width: 45rem;
+}
+
+textarea {
+    resize: none !important;
+}
+
+.form-label {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 2px solid #31285f7a !important;
+    font-family: light !important;
+    color: #31285f !important;
+}
+
+.btn {
+    font-family: Comic !important;
+    color: white !important;
+    background-color: #f8317a !important;
+}
+
+.btn:hover {
+    background-color: #d43575 !important;
+}   
+
+.error{
+    border: 2px solid var(--bs-danger) !important;
+}
+
